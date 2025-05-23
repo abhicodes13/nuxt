@@ -1,23 +1,35 @@
 <script setup>
 const { data: posts, pending, error } = await useFetch("/api/posts");
+
+if (error.value) {
+  console.error("Fetch error:", error.value);
+}
 </script>
 
 <template>
-  <div class="p-6">
-    <h1 class="text-2xl font-bold mb-4">Demo Posts</h1>
+  <section class="min-h-screen bg-gray-50 px-6 py-10">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold text-gray-800 mb-8">
+        📚 Demo Posts from Our API
+      </h1>
 
-    <div v-if="pending">Loading posts...</div>
-    <div v-else-if="error">Failed to load posts.</div>
+      <div v-if="pending" class="text-gray-500">Loading posts...</div>
+      <div v-else-if="error" class="text-red-500">
+        Something went wrong fetching posts.
+      </div>
 
-    <ul v-else class="space-y-4">
-      <li
-        v-for="post in posts"
-        :key="post.id"
-        class="border border-gray-200 p-4 rounded shadow"
-      >
-        <h2 class="text-xl font-semibold mb-2">{{ post.title }}</h2>
-        <p class="text-gray-600">{{ post.content }}</p>
-      </li>
-    </ul>
-  </div>
+      <div v-else class="space-y-6">
+        <div
+          v-for="post in posts"
+          :key="post.id"
+          class="bg-white p-6 rounded-xl shadow hover:shadow-md transition-shadow"
+        >
+          <h2 class="text-2xl font-semibold text-blue-600 mb-2">
+            {{ post.title }}
+          </h2>
+          <p class="text-gray-700">{{ post.content }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
