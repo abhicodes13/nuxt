@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-15',
+  app: {
+    head: {
+      title: "Nuxt API fetch",
+    },
+  },
+  compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss']
-})
+  modules: ["@nuxtjs/tailwindcss"],
+});
