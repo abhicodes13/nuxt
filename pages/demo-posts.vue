@@ -7,7 +7,9 @@ if (error.value) {
 </script>
 
 <template>
-  <section class="min-h-screen bg-gray-50 px-6 py-10">
+  <section
+    class="min-h-screen bg-gray-50 px-6 py-10 bg-gradient-to-br from-indigo-500 to-purple-600"
+  >
     <div class="max-w-4xl mx-auto">
       <h1 class="text-3xl font-bold text-gray-800 mb-8">
         📚 Demo Posts from Our API
@@ -22,7 +24,7 @@ if (error.value) {
         <div
           v-for="post in posts"
           :key="post.id"
-          class="bg-white p-6 rounded-xl shadow hover:shadow-md transition-shadow"
+          class="bg-white p-6 rounded-xl shadow hover:shadow-md transition-shadow bg-gradient-to-br from-indigo-100 to-purple-300"
         >
           <h2 class="text-2xl font-semibold text-blue-600 mb-2">
             {{ post.title }}
