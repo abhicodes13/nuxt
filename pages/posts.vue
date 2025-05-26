@@ -5,8 +5,7 @@
     <div class="max-w-5xl mx-auto">
       <h1 class="text-4xl font-extrabold mb-6 drop-shadow-lg">Posts</h1>
       <p class="mb-8 text-lg drop-shadow-md">
-        Browse posts fetched from JSONPlaceholder API — learn Vue & Nuxt with
-        real data!
+        Real-Time Data Fetching using useFetch in Vue and Nuxt.js
       </p>
 
       <div class="flex gap-4 mb-10">
