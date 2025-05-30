@@ -12,7 +12,7 @@ if (error.value) {
   >
     <div class="max-w-4xl mx-auto">
       <h1 class="text-3xl font-bold text-gray-800 mb-8">
-        📚 Demo Posts from Our API
+        📚 Fetching posts from REST API
       </h1>
 
       <div v-if="pending" class="text-gray-500">Loading posts...</div>
