@@ -2,6 +2,7 @@
 const { data: posts, pending, error } = await useFetch("/api/posts");
 
 if (error.value) {
+  //error check
   console.error("Fetch error:", error.value);
 }
 </script>
