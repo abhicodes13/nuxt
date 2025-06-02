@@ -25,7 +25,3 @@
     </div>
   </section>
 </template>
-
-<style>
-/* Optional: you can add a custom font or some global styles here */
-</style>
